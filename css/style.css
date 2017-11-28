@@ -1,0 +1,36 @@
+.panel {
+  display: none; }
+
+.panel.active {
+  display: block; }
+
+.mdc-theme--dark .color-white {
+  color: white; }
+
+.counter-number {
+  margin-bottom: 0; }
+
+.counter-subheading {
+  font-size: 14px;
+  margin-top: 0;
+  opacity: 0.5; }
+
+.mdc-tab {
+  min-width: 80px;
+  min-height: 30px;
+  margin: 0;
+  padding: 0px 15px; }
+
+.nexus_mini {
+  position: fixed;
+  left: calc(50% - 48px);
+  padding: 20px 20px 10px 20px;
+  bottom: 0;
+  transition: all 0.5s ease; }
+
+.nexus_mini:hover {
+  transform: translate3d(0, 0, 0); }
+
+.panels {
+  height: 400px;
+  overflow: auto; }

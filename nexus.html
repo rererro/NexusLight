@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html class="mdc-typography">
+<head>
+    <title>Material Components for the web</title>
+    <link rel="stylesheet"
+          href="node_modules/material-components-web/dist/material-components-web.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet"
+          href="css/style.css">
+</head>
+<body>
+
+<iframe class="_demo_iframe" src="http://huaban.com/boards/27928526/" frameborder="0" style="position:fixed;left:0;top:0;overflow:hidden;height:100%;width: 100vw;z-index:-100"></iframe>
+
+
+<div class="nexus_mini">
+    <button id="default-dialog-activation" class="mdc-fab material-icons" aria-label="Favorite" >
+      <span class="mdc-fab__icon">
+        favorite
+      </span>
+    </button>
+</div>
+<aside id="mdc-dialog-default"
+       class="mdc-dialog"
+       role="alertdialog"
+       aria-labelledby="my-mdc-dialog-label"
+       aria-describedby="my-mdc-dialog-description">
+    <div class="mdc-dialog__surface">
+        <header class="mdc-toolbar mdc-toolbar--fixed">
+            <div class="mdc-toolbar__row">
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
+                    <a href="#" class="material-icons mdc-toolbar__menu-icon">menu</a>
+                    <span class="mdc-toolbar__title">Title</span>
+                </section>
+                <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
+                    <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Download" alt="Download">file_download</a>
+                    <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Print this page" alt="Print this page">print</a>
+                    <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Bookmark this page" alt="Bookmark this page">bookmark</a>
+                </section>
+            </div>
+        </header>
+        <div class="mdc-layout-grid ">
+            <div class="mdc-layout-grid__inner ">
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-8 ">
+                    <div class="mdc-layout-grid__inner ">
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
+                            <div class="mdc-layout-grid__inner ">
+                                <!--text-->
+                                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+                                    <h1 class="counter-number color-white">12.5</h1>
+                                    <p class="counter-subheading color-white">贡献值/秒</p>
+                                </div>
+                                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+                                    <h1 class="counter-number color-white">515</h1>
+                                    <p class="counter-subheading color-white">今日总贡献</p>
+                                </div>
+                                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-2">
+                                    <h1 class="counter-number color-white">124.2</h1>
+                                    <p class="counter-subheading color-white">总贡献</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!--Slider-->
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--align-middle mdc-layout-grid__cell--span-3">
+                            <div class="mdc-slider mdc-slider--discrete" tabindex="0" role="slider"
+                                 aria-valuemin="0" aria-valuemax="10" aria-valuenow="3"
+                                 aria-label="Select Value">
+                                <div class="mdc-slider__track-container">
+                                    <div class="mdc-slider__track"></div>
+                                </div>
+                                <div class="mdc-slider__thumb-container">
+                                    <div class="mdc-slider__pin">
+                                        <span class="mdc-slider__pin-value-marker"></span>
+                                    </div>
+                                    <svg class="mdc-slider__thumb" width="21" height="21">
+                                        <circle cx="10.5" cy="10.5" r="7.875"></circle>
+                                    </svg>
+                                    <div class="mdc-slider__focus-ring"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <!--checker-->
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--align-middle mdc-layout-grid__cell--span-3 ">
+                            <div class="mdc-switch">
+                                <input type="checkbox" id="basic-switch" class="mdc-switch__native-control" checked="" />
+                                <div class="mdc-switch__background">
+                                    <div class="mdc-switch__knob"></div>
+                                </div>
+                            </div>
+                            <label for="basic-switch" class="mdc-switch-label color-white">智能限速</label>
+                        </div>
+                        <!--btn with menu-->
+                        <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 ">
+                            <div class="toolbar mdc-menu-anchor">
+                                <button class="mdc-button some-button">
+                                    Button
+                                </button>
+                                <div class="mdc-simple-menu" tabindex="-1">
+                                    <ul class="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true">
+                                        <li class="mdc-list-item" role="menuitem" tabindex="0">
+                                            A Menu Item
+                                        </li>
+                                        <li class="mdc-list-item" role="menuitem" tabindex="0">
+                                            Another Menu Item
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="mdc-layout-grid__inner">
+                        <div class="demo-grid mdc-layout-grid max-width">
+                            <div class="mdc-layout-grid__inner">
+                                <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4"></div>
+                                <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4"></div>
+                                <div class="demo-cell mdc-layout-grid__cell mdc-layout-grid__cell--span-4"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-4">
+
+                    <nav id="dynamic-tab-bar" class="mdc-tab-bar mdc-tab-bar--indicator-accent " role="tablist">
+                        <a role="tab" aria-controls="panel-1"
+                           class="mdc-tab mdc-tab--active" href="#panel-1">当前</a>
+                        <a role="tab" aria-controls="panel-2"
+                           class="mdc-tab" href="#panel-2">今日</a>
+                        <a role="tab" aria-controls="panel-3"
+                           class="mdc-tab" href="#panel-3">本周</a>
+                        <span class="mdc-tab-bar__indicator"></span>
+                    </nav>
+
+                    <div class="panels">
+                        <div class="panel active" id="panel-1" role="tabpanel" aria-hidden="false">
+                            <ul class="mdc-list mdc-list--avatar-list">
+                                <li class="mdc-list-item">
+                                    <img class="mdc-list-item__start-detail" src="http://i.imgur.com/Q4vpATV.png"
+                                         width="56" height="56" alt="Picture of Janet Perkins">
+                                    Janet Perkins
+                                    <span class="mdc-list-item__end-detail">1234</span>
+                                </li>
+                                <li class="mdc-list-item">
+                                    <img class="mdc-list-item__start-detail" src="http://i.imgur.com/Q4vpATV.png"
+                                         width="56" height="56" alt="Picture of Mary Johnson">
+                                    Mary Johnson
+                                    <span class="mdc-list-item__end-detail">1234</span>
+                                </li>
+                                <li class="mdc-list-item">
+                                    <img class="mdc-list-item__start-detail" src="http://i.imgur.com/Q4vpATV.png"
+                                         width="56" height="56" alt="Picture of Peter Carlsson">
+                                    Peter Carlsson
+                                    <span class="mdc-list-item__end-detail">1234</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="panel" id="panel-2" role="tabpanel" aria-hidden="true">Item Two</div>
+                        <div class="panel" id="panel-3" role="tabpanel" aria-hidden="true">Item Three</div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="mdc-dialog__backdrop"></div>
+</aside>
+<script src="node_modules/material-components-web/dist/material-components-web.js"></script>
+<script src="bundle.js"></script>
+<script>mdc.autoInit()</script>
+
+</body>
+</html>
