@@ -1,0 +1,260 @@
+/** Function Definitions **/
+/** Basic Styles **/
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+/*html {*/
+  /*font-size: 62.5%;*/
+/*}*/
+/*body {*/
+  /*display: -webkit-box;*/
+  /*display: -ms-flexbox;*/
+  /*display: flex;*/
+  /*-webkit-box-pack: center;*/
+      /*-ms-flex-pack: center;*/
+          /*justify-content: center;*/
+  /*-webkit-box-align: center;*/
+      /*-ms-flex-align: center;*/
+          /*align-items: center;*/
+  /*height: 100vh;*/
+  /*font-family: "Roboto", sans-serif;*/
+  /*-webkit-font-smoothing: antialiased;*/
+  /*-moz-osx-font-smoothing: grayscale;*/
+  /*line-height: 1;*/
+  /*opacity:0.5;*/
+  /*-webkit-user-select: none;*/
+     /*-moz-user-select: none;*/
+      /*-ms-user-select: none;*/
+          /*user-select: none;*/
+/*}*/
+/** Speedometer Styles **/
+/*.speedometer-container {*/
+  /*width: 100%;*/
+  /*height: 300px;*/
+  /*position: relative;*/
+
+/*}*/
+/*.speedometer-container::before {*/
+  /*content: "";*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
+  /*background-image: -webkit-radial-gradient(top left, circle, #fff, transparent);*/
+  /*background-image: radial-gradient(circle at top left, #fff, transparent);*/
+  /*opacity: 0.12;*/
+/*}*/
+/*.overlay {*/
+  /*pointer-events: none;*/
+/*}*/
+/*.overlay::before,*/
+/*.overlay::after {*/
+  /*content: "";*/
+  /*position: absolute;*/
+  /*top: 0;*/
+  /*left: 0;*/
+  /*right: 0;*/
+  /*bottom: 0;*/
+/*}*/
+/*.overlay::before {*/
+  /*background-image: -webkit-radial-gradient(top left, circle, #25fabb, transparent);*/
+  /*background-image: radial-gradient(circle at top left, #25fabb, transparent);*/
+  /*opacity: 0.04;*/
+/*}*/
+/*.overlay::after {*/
+  /*background-image: -webkit-radial-gradient(bottom right, circle, #874bd7, transparent);*/
+  /*background-image: radial-gradient(circle at bottom right, #874bd7, transparent);*/
+  /*opacity: 0.2;*/
+/*}*/
+.speedometer .inner-ring {
+  width: 210px;
+  height: 210px;
+  position: absolute;
+  top: calc(50% - 125px);
+  left: calc(50% - 105px);
+}
+.speedometer .inner-ring::before,
+.speedometer .inner-ring::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  border: 2px solid transparent;
+  border-top: 2px solid #3b3d45;
+  border-right: 2px solid #3b3d45;
+  border-radius: 50%;
+}
+.speedometer .inner-ring::before {
+  -webkit-transform: rotate(-75deg);
+          transform: rotate(-75deg);
+}
+.speedometer .inner-ring::after {
+  -webkit-transform: rotate(-15deg);
+          transform: rotate(-15deg);
+}
+.speedometer .outer-ring {
+  width: 320px;
+  height: 320px;
+  position: absolute;
+  top: calc(50% - 180px);
+  left: calc(50% - 160px);
+  border-radius: 50%;
+}
+.speedometer .digit-ring {
+  position: absolute;
+  top: calc(50% - 20px);
+  left: 50%;
+}
+.speedometer .tick {
+  width: 8px;
+  border-top: 2px solid #3b3d45;
+  position: absolute;
+  top: calc(50% - 1px);
+  left: calc(50% - 4px);
+}
+.speedometer .tick:nth-child(6n+1) {
+  width: 16px;
+  left: calc(50% - 8px);
+  border-color: #787a81;
+}
+.speedometer .digit {
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  top: calc(50% - 10px);
+  left: calc(50% - 10px);
+  font-weight: bold;
+  text-align: center;
+  line-height: 20px;
+  font-size: 11px;
+  opacity:0.5;
+}
+.speedometer .details {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 210px;
+  height: 210px;
+  position: absolute;
+  top: calc(50% - 125px);
+  left: calc(50% - 105px);
+}
+.speedometer .label {
+  font-size: 13px;
+  font-weight: bold;
+  text-transform: uppercase;
+  opacity:0.5;
+}
+.speedometer .speed {
+  font-size: 60px;
+  color: #fff;
+  line-height: 60px;
+}
+.speedometer .unit {
+  font-size: 13px;
+  opacity:0.5;
+}
+.speedometer .progress {
+  width: 210px;
+  height: 210px;
+  position: absolute;
+  top: calc(50% - 125px);
+  left: calc(50% - 105px);
+  border-radius: 50%;
+}
+.speedometer .progress::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #f1252e;
+  box-shadow: 0 0 60px 20px rgba(241,37,46,0.35);
+}
+.speedometer .retry-button {
+  width: 100px;
+  position: absolute;
+  left: calc(50% - 50px);
+  top: 300px;
+}
+/*.speedometer .retry-button {*/
+  /*width: 100px;*/
+  /*border: 2px solid #3b3d45;*/
+  /*-webkit-appearance: none;*/
+     /*-moz-appearance: none;*/
+          /*appearance: none;*/
+  /*position: absolute;*/
+  /*left: calc(50% - 50px);*/
+  /*bottom: 135px;*/
+  /*font-size: 12px;*/
+  /*font-weight: bold;*/
+  /*text-align: center;*/
+  /*text-transform: uppercase;*/
+  /*line-height: 30px;*/
+  /*opacity:0.5;*/
+  /*border-radius: 30px;*/
+  /*background-color: transparent;*/
+  /*cursor: pointer;*/
+  /*outline: none;*/
+  /*-webkit-transition: background-color 250ms ease-out;*/
+  /*transition: background-color 250ms ease-out;*/
+/*}*/
+/*.speedometer .retry-button:hover,*/
+/*.speedometer .retry-button:focus {*/
+  /*background-color: rgba(59,61,69,0.15);*/
+/*}*/
+.speedometer footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 35px 0;
+  position: absolute;
+  top: auto;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.speedometer .stat {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+  width: 0;
+  padding: 10px 0;
+  text-align: center;
+}
+.speedometer .stat:not(:last-child) {
+  border-right: 2px solid rgba(255,255,255,0.05);
+}
+.speedometer .stat label {
+  display: block;
+  margin-bottom: 7.5px;
+  font-size: 12px;
+  font-weight: bold;
+  text-transform: uppercase;
+}
+.speedometer .stat p {
+  font-size: 14px;
+  color: #fff;
+}
