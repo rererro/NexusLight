@@ -1,8 +1,8 @@
 //node-sass -o css style.scss -w  自动compile的代码
 
 :root {
-  --mdc-theme-primary: #ff4081;
-  //--mdc-theme-text-primary-on-primary: #373737;
+  --mdc-theme-primary: #ff5300;
+  --mdc-theme-secondary: #ff5300;
 }
 
 :focus {
@@ -146,7 +146,8 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #ff4081;
+  background-color: #ff4081;
+  background-color: var(--mdc-theme-secondary, #ff4081);
   color: #fff;
 }
 
@@ -209,26 +210,243 @@
 }
 
 .mdc-list--more-dense {
-  padding: 5px 0 0 0;
   font-size: .812rem;
+  .mdc-list-item {
+    height: 40px;
+  }
+  .mdc-list-item__end-detail {
+    font-size: 12px;
+    font-weight:800;
+    color: #aaa;
+    width: auto;
+    .material-icons {
+      display: inline-block;
+      width: 12px;
+      height: 18px;
+      font-size: 12px;
+      line-height: inherit;
+      vertical-align: top;
+    }
+  }
 }
 
-.mdc-list--more-dense .mdc-list-item {
-  height:30px;
+
+.mdc-list--achievements {
+  .mdc-list-item {
+    line-height: 1.7em;
+    white-space: initial;
+    align-items: flex-start;
+    height: 55px;
+    margin-top: 8px;
+    .mdc-list-item__start-detail {
+      margin-right:10px;
+    }
+    .mdc-list-item__secondary-text {
+      font-size:11px;
+      opacity:0.7;
+      line-height: 1.3em;
+    }
+  }
 }
 
-.mdc-list--more-dense .mdc-list-item__end-detail {
-  font-size: 12px;
-  font-weight:800;
-  color: #aaa;
-  width: auto;
+
+.speedometer .progress::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #f1252e;
+  box-shadow: 0 0 60px 20px rgba(241,37,46,0.35);
 }
 
-.mdc-list--more-dense .mdc-list-item__end-detail .material-icons {
-  display: inline-block;
-  width: 12px;
-  height: 18px;
-  font-size: 12px;
-  line-height: inherit;
-  vertical-align: top;
+.mdc-layout-grid__cell {
+  overflow:hidden;
+}
+
+.main-container {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  flex-direction:column;
+  height:100%;
+  position:relative;
+  .speedometer {
+    height: 300px;
+    margin-top: 90px;
+    position: relative;
+    width: 100%;
+  }
+}
+
+.mdc-toolbar__title {
+  font-size:1.1rem;
+}
+
+
+
+$size: 200px;
+
+$colorPrimary: white;
+
+@function pi() {
+  @return 3.14159265359;
+}
+@function tau(){
+  @return pi()/2;
+}
+
+.ui-container{
+  display:block;
+  transform-style: preserve-3d;
+  transition: .25s;
+  width:$size*2;
+  height:$size*2;
+  position:absolute;
+  top:50%;
+  left:50%;
+  margin-top:-$size;
+  margin-left:-$size;
+}
+
+.ui-container>svg{
+  position:absolute;
+  width:$size*2;
+  height:$size*2;
+}
+
+svg.ui-circle{
+  circle{
+    fill: transparent;
+    stroke: rgba($colorPrimary, .2);
+    stroke-width:20px;
+    r:$size/3;
+    cx:$size;
+    cy:$size;
+    transition: fill .3s ease-out;
+  }
+
+  circle.circle-stroked{
+
+  }
+
+  circle .dotted{
+
+  }
+
+  circle.circle-slice{
+    stroke-dasharray: 100 10 ;
+    stroke: rgba($colorPrimary, 0.2);
+  }
+}
+
+
+// STYLE SEMANTICS
+.filter-glow{
+  filter: drop-shadow( 0px 0px 10px rgba( $colorPrimary, 0.2) );
+}
+.filter-glow-lg{
+  filter: drop-shadow( 0px 0px 10px 4px rgba( $colorPrimary, 2) );
+}
+
+
+svg.ui-circle {
+
+
+  .distance-1{
+
+    transform: rotateZ(0deg) translateZ(30px);
+  }
+
+  .dash-sm{
+    stroke-dasharray: tau()*($size/1.5) 10000;
+  }
+
+
+  .stroke-sm{
+    stroke-width: 2px;
+  }
+  .stroke-md{
+    stroke-width:4px;
+  }
+  .stroke-lg{
+    stroke-width: 8px;
+  }
+  .stroke-xl{
+    stroke-width: 3px;
+  }
+  .stroke-xxl{
+    stroke-width: 24px;
+  }
+
+  .radius-sm{
+    r:$size/12;
+  }
+  .radius-md{
+    r:$size/7;
+  }
+  .radius-lg{
+    r:$size/6;
+  }
+  .radius-xl{
+    r:$size/3;
+  }
+  .radius-xxl{
+    r:$size/1.5;
+  }
+}
+
+
+// SPEED
+body .ui-circle.duration-05s{
+  animation-duration: 0.5s ;
+}
+body .ui-circle.duration-1s{
+  animation-duration: 1s ;
+}
+body .ui-circle.duration-2s{
+  animation-duration: 2s;
+}
+body .ui-circle.duration-3s{
+  animation-duration: 3s ;
+}
+body .ui-circle.duration-4s{
+  animation-duration: 4s ;
+}
+body .ui-circle.duration-5s{
+  animation-duration: 5s ;
+}
+body .ui-circle.duration-10s{
+  animation-duration: 10s ;
+}
+body .ui-circle.duration-30s{
+  animation-duration: 30s ;
+}
+
+body .ui-circle.duration-60s{
+  animation-duration: 60s ;
+}
+
+// ANIMATIONS
+.animation-rotate{
+  animation: rotate 10s linear infinite ;
+}
+
+@keyframes rotate{
+  from{
+    transform: rotate(-90deg);
+  }
+
+  to{
+    transform: rotate(270deg);
+  }
 }

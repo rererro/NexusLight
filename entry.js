@@ -1,33 +1,63 @@
 // Theme Color
 
-// Ranking Tab Bar
+// Name textfield
+
+// Tab Bar
 import {MDCTab, MDCTabFoundation} from '@material/tabs';
 import {MDCTabBar, MDCTabBarFoundation} from '@material/tabs';
 
-var dynamicTabBar = window.dynamicTabBar = new mdc.tabs.MDCTabBar(document.querySelector('#dynamic-tab-bar'));
-var panels = document.querySelector('.panels');
+// Left Tab Bar
+var leftTabBar = window.dynamicTabBar = new mdc.tabs.MDCTabBar(document.querySelector('#left-tab-bar'));
+var leftPanels = document.querySelector('.left-panels');
 
-dynamicTabBar.tabs.forEach(function(tab) {
+leftTabBar.tabs.forEach(function(tab) {
     tab.preventDefaultOnClick = true;
 });
 
 function updatePanel(index) {
-    var activePanel = panels.querySelector('.panel.active');
+    var activePanel = leftPanels.querySelector('.left-panel.active');
     if (activePanel) {
         activePanel.classList.remove('active');
     }
-    var newActivePanel = panels.querySelector('.panel:nth-child(' + (index + 1) + ')');
+    var newActivePanel = leftPanels.querySelector('.left-panel:nth-child(' + (index + 1) + ')');
     if (newActivePanel) {
         newActivePanel.classList.add('active');
     }
 }
 
-dynamicTabBar.listen('MDCTabBar:change', function ({detail: tabs}) {
+leftTabBar.listen('MDCTabBar:change', function ({detail: tabs}) {
     var nthChildIndex = tabs.activeTabIndex;
 
     updatePanel(nthChildIndex);
 });
 
+// Right Tab Bar
+import {MDCTab, MDCTabFoundation} from '@material/tabs';
+import {MDCTabBar, MDCTabBarFoundation} from '@material/tabs';
+
+var rightTabBar = window.dynamicTabBar = new mdc.tabs.MDCTabBar(document.querySelector('#right-tab-bar'));
+var rightPanels = document.querySelector('.right-panels');
+
+rightTabBar.tabs.forEach(function(tab) {
+    tab.preventDefaultOnClick = true;
+});
+
+function updatePanel(index) {
+    var activePanel = rightPanels.querySelector('.right-panel.active');
+    if (activePanel) {
+        activePanel.classList.remove('active');
+    }
+    var newActivePanel = rightPanels.querySelector('.right-panel:nth-child(' + (index + 1) + ')');
+    if (newActivePanel) {
+        newActivePanel.classList.add('active');
+    }
+}
+
+rightTabBar.listen('MDCTabBar:change', function ({detail: tabs}) {
+    var nthChildIndex = tabs.activeTabIndex;
+
+    updatePanel(nthChildIndex);
+});
 
 // slider
 // import {MDCSlider} from '@material/slider';

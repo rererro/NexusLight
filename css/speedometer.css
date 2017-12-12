@@ -114,10 +114,11 @@
 }
 .speedometer .tick {
   width: 8px;
-  border-top: 2px solid #3b3d45;
+  border-top: 2px solid #ffffff;
   position: absolute;
   top: calc(50% - 1px);
   left: calc(50% - 4px);
+  opacity: 0.5;
 }
 .speedometer .tick:nth-child(6n+1) {
   width: 16px;
@@ -134,7 +135,7 @@
   text-align: center;
   line-height: 20px;
   font-size: 11px;
-  opacity:0.5;
+  /*opacity:0.5;*/
 }
 .speedometer .details {
   display: -webkit-box;
@@ -194,7 +195,7 @@
   width: 100px;
   position: absolute;
   left: calc(50% - 50px);
-  top: 300px;
+  top: 200px;
 }
 /*.speedometer .retry-button {*/
   /*width: 100px;*/

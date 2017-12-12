@@ -1,5 +1,6 @@
 :root {
-  --mdc-theme-primary: #ff4081; }
+  --mdc-theme-primary: #ff5300;
+  --mdc-theme-secondary: #ff5300; }
 
 :focus {
   outline: none; }
@@ -126,7 +127,8 @@
   width: 20px;
   height: 20px;
   border-radius: 50%;
-  background: #ff4081;
+  background-color: #ff4081;
+  background-color: var(--mdc-theme-secondary, #ff4081);
   color: #fff; }
 
 .mdc-dialog__bg {
@@ -180,22 +182,176 @@
   text-transform: uppercase; }
 
 .mdc-list--more-dense {
-  padding: 5px 0 0 0;
   font-size: .812rem; }
+  .mdc-list--more-dense .mdc-list-item {
+    height: 40px; }
+  .mdc-list--more-dense .mdc-list-item__end-detail {
+    font-size: 12px;
+    font-weight: 800;
+    color: #aaa;
+    width: auto; }
+    .mdc-list--more-dense .mdc-list-item__end-detail .material-icons {
+      display: inline-block;
+      width: 12px;
+      height: 18px;
+      font-size: 12px;
+      line-height: inherit;
+      vertical-align: top; }
 
-.mdc-list--more-dense .mdc-list-item {
-  height: 30px; }
+.mdc-list--achievements .mdc-list-item {
+  line-height: 1.7em;
+  white-space: initial;
+  align-items: flex-start;
+  height: 55px;
+  margin-top: 8px; }
+  .mdc-list--achievements .mdc-list-item .mdc-list-item__start-detail {
+    margin-right: 10px; }
+  .mdc-list--achievements .mdc-list-item .mdc-list-item__secondary-text {
+    font-size: 11px;
+    opacity: 0.7;
+    line-height: 1.3em; }
 
-.mdc-list--more-dense .mdc-list-item__end-detail {
-  font-size: 12px;
-  font-weight: 800;
-  color: #aaa;
-  width: auto; }
+.speedometer .progress::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: calc(50% - 3px);
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #f1252e;
+  box-shadow: 0 0 60px 20px rgba(241, 37, 46, 0.35); }
 
-.mdc-list--more-dense .mdc-list-item__end-detail .material-icons {
-  display: inline-block;
-  width: 12px;
-  height: 18px;
-  font-size: 12px;
-  line-height: inherit;
-  vertical-align: top; }
+.mdc-layout-grid__cell {
+  overflow: hidden; }
+
+.main-container {
+  overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
+  justify-content: flex-start;
+  flex-direction: column;
+  height: 100%;
+  position: relative; }
+  .main-container .speedometer {
+    height: 300px;
+    margin-top: 90px;
+    position: relative;
+    width: 100%; }
+
+.mdc-toolbar__title {
+  font-size: 1.1rem; }
+
+.ui-container {
+  display: block;
+  transform-style: preserve-3d;
+  transition: .25s;
+  width: 400px;
+  height: 400px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-top: -200px;
+  margin-left: -200px; }
+
+.ui-container > svg {
+  position: absolute;
+  width: 400px;
+  height: 400px; }
+
+svg.ui-circle circle {
+  fill: transparent;
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 20px;
+  r: 66.66667px;
+  cx: 200px;
+  cy: 200px;
+  transition: fill .3s ease-out; }
+
+svg.ui-circle circle.circle-slice {
+  stroke-dasharray: 100 10;
+  stroke: rgba(255, 255, 255, 0.2); }
+
+.filter-glow {
+  filter: drop-shadow(0px 0px 10px rgba(255, 255, 255, 0.2)); }
+
+.filter-glow-lg {
+  filter: drop-shadow(0px 0px 10px 4px white); }
+
+svg.ui-circle .distance-1 {
+  transform: rotateZ(0deg) translateZ(30px); }
+
+svg.ui-circle .dash-sm {
+  stroke-dasharray: 209.43951px 10000; }
+
+svg.ui-circle .stroke-sm {
+  stroke-width: 2px; }
+
+svg.ui-circle .stroke-md {
+  stroke-width: 4px; }
+
+svg.ui-circle .stroke-lg {
+  stroke-width: 8px; }
+
+svg.ui-circle .stroke-xl {
+  stroke-width: 3px; }
+
+svg.ui-circle .stroke-xxl {
+  stroke-width: 24px; }
+
+svg.ui-circle .radius-sm {
+  r: 16.66667px; }
+
+svg.ui-circle .radius-md {
+  r: 28.57143px; }
+
+svg.ui-circle .radius-lg {
+  r: 33.33333px; }
+
+svg.ui-circle .radius-xl {
+  r: 66.66667px; }
+
+svg.ui-circle .radius-xxl {
+  r: 133.33333px; }
+
+body .ui-circle.duration-05s {
+  animation-duration: 0.5s; }
+
+body .ui-circle.duration-1s {
+  animation-duration: 1s; }
+
+body .ui-circle.duration-2s {
+  animation-duration: 2s; }
+
+body .ui-circle.duration-3s {
+  animation-duration: 3s; }
+
+body .ui-circle.duration-4s {
+  animation-duration: 4s; }
+
+body .ui-circle.duration-5s {
+  animation-duration: 5s; }
+
+body .ui-circle.duration-10s {
+  animation-duration: 10s; }
+
+body .ui-circle.duration-30s {
+  animation-duration: 30s; }
+
+body .ui-circle.duration-60s {
+  animation-duration: 60s; }
+
+.animation-rotate {
+  animation: rotate 10s linear infinite; }
+
+@keyframes rotate {
+  from {
+    transform: rotate(-90deg); }
+  to {
+    transform: rotate(270deg); } }

@@ -25,15 +25,32 @@
        role="alertdialog"
        aria-labelledby="my-mdc-dialog-label"
        aria-describedby="my-mdc-dialog-description">
-    <div class="mdc-dialog__surface" style="background:#333">
-        <!--<div class="mdc-dialog__bg"></div>-->
+    <div class="mdc-dialog__surface" style="background:#333;    background-image: url(https://i.pinimg.com/originals/07/d7/b2/07d7b2d6ad7071cb82da2f0f3c6fbac9.jpg);
+    background-size: cover;">
+<!--Nav-->
         <header class="mdc-toolbar ">
             <div class="mdc-toolbar__row">
                 <section class="mdc-toolbar__section mdc-toolbar__section--align-start">
-                    <img src="http://store.akamai.steamstatic.com/public/shared/images/responsive/header_logo.png" style="height:30px;">
-                    <span class="mdc-toolbar__title">
 
+                    <span class="mdc-toolbar__title">
+                        霖大贤
+                        <span class="name">LV 20</span>
                     </span>
+
+                    <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Bookmark this page" alt="Bookmark this page" style="color:orange">
+                    </a>
+                    <a href="#" class=" mdc-toolbar__icon" aria-label="Bookmark this page" alt="Bookmark this page">
+                        <span class="material-icons" style="font-size: 20px;">
+                            card_giftcard
+                        </span>
+                        <span class="mdc-typography--body2" style="padding-left:5px;opacity:0.7">123</span>
+                    </a>
+                    <a href="#" class=" mdc-toolbar__icon" aria-label="Bookmark this page" alt="Bookmark this page">
+                        <span class="material-icons" style="    font-size: 20px;">
+                            card_giftcard
+                        </span>
+                        <span class="mdc-typography--body2" style="padding-left:5px;opacity:0.7">77</span>
+                    </a>
                 </section>
                 <section class="mdc-toolbar__section mdc-toolbar__section--align-end" role="toolbar">
                     <a href="#" class="material-icons mdc-toolbar__icon" aria-label="Print this page" alt="Print this page">account_circle</a>
@@ -48,10 +65,10 @@
                     </a>
                     <div class="mdc-simple-menu" tabindex="-1">
                         <ul class="mdc-simple-menu__items mdc-list" role="menu" aria-hidden="true">
-                            <li class="mdc-list-item" role="menuitem" tabindex="0">
+                            <li class="mdc-list-item mdc-list-item-curved" role="menuitem" tabindex="0">
                                 A Menu Item
                             </li>
-                            <li class="mdc-list-item" role="menuitem" tabindex="0">
+                            <li class="mdc-list-item mdc-list-item-curved" role="menuitem" tabindex="0">
                                 A Menu Item
                             </li>
                             <li class="mdc-list-item" role="menuitem" tabindex="0">
@@ -67,135 +84,113 @@
         </header>
         <div class="mdc-layout-grid " style="padding:0;">
             <div class="mdc-layout-grid__inner ">
+<!--Left section-->
                 <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 ">
-                    <div style="padding:20px;">
-                        <p class="counter-subheading color-white">用户</p>
-                        <h1 class="counter-number color-white">访客123213 <span style="font-size:10px;color:black;background:darkgrey;border-radius:5px;padding:2px 5px;">登录</span></h1>
-                    </div>
-                    <div style="padding:20px 0 20px 20px;">
-                        <p class="counter-subheading color-white">成就</p>
-                        <div class="mdc-grid-list">
-                            <ul class="mdc-grid-list__tiles">
-                                <li class="mdc-grid-tile">
-                                    <div class="mdc-grid-tile__primary">
-                                        <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                                    </div>
-                                    <span class="mdc-grid-tile__secondary">
-        <span class="mdc-grid-tile__title">Title</span>
-      </span>
+                    <nav id="left-tab-bar" class="mdc-tab-bar mdc-tab-bar__ranking mdc-tab-bar--indicator-accent" role="tablist">
+                        <a role="tab" aria-controls="panel-1"
+                           class="mdc-tab mdc-tab--active" href="#left-panel-1">今日任务</a>
+                        <a role="tab" aria-controls="panel-1"
+                           class="mdc-tab mdc-tab--active" href="#left-panel-1">本周</a>
+                        <a role="tab" aria-controls="panel-1"
+                           class="mdc-tab mdc-tab--active" href="#left-panel-1">成就</a>
+                        <span class="mdc-tab-bar__indicator"></span>
+                    </nav>
+                    <div class="panels left-panels">
+                        <div class="panel left-panel active" id="left-panel-1" role="tabpanel" aria-hidden="false">
+                            <ul class="mdc-list--achievements mdc-list mdc-list--avatar-list mdc-list--more-dense">
+                                <li class="mdc-list-item">
+                                    <img class="mdc-list-item__start-detail" src="http://wfarm4.dataknet.com/static/resources/icons/set117/a1610fef.png" width="56" height="56" alt="Brown Bear">
+                                    <span class="mdc-list-item__text">
+                                        核心价值观
+                                        <span class="mdc-list-item__secondary-text" >朗读社会主义核心价值观100次</span>
+                                    </span>
+
                                 </li>
-                                <li class="mdc-grid-tile">
-                                    <div class="mdc-grid-tile__primary">
-                                        <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                                    </div>
-                                    <span class="mdc-grid-tile__secondary">
-        <span class="mdc-grid-tile__title">Title</span>
-      </span>
-                                </li>                                <li class="mdc-grid-tile">
-                                <div class="mdc-grid-tile__primary">
-                                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                                </div>
-                                <span class="mdc-grid-tile__secondary">
-        <span class="mdc-grid-tile__title">Title</span>
-      </span>
-                            </li>
-                                <li class="mdc-grid-tile">
-                                    <div class="mdc-grid-tile__primary">
-                                        <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                                    </div>
-                                    <span class="mdc-grid-tile__secondary">
-        <span class="mdc-grid-tile__title">Title</span>
-      </span>
-                                </li>                                <li class="mdc-grid-tile">
-                                <div class="mdc-grid-tile__primary">
-                                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                                </div>
-                                <span class="mdc-grid-tile__secondary">
-        <span class="mdc-grid-tile__title">Title</span>
-      </span>
-                            </li>
-                                <li class="mdc-grid-tile">
-                                    <div class="mdc-grid-tile__primary">
-                                        <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                                    </div>
-                                    <span class="mdc-grid-tile__secondary">
-        <span class="mdc-grid-tile__title">Title</span>
-      </span>
-                                </li>                                <li class="mdc-grid-tile">
-                                <div class="mdc-grid-tile__primary">
-                                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                                </div>
-                                <span class="mdc-grid-tile__secondary">
-        <span class="mdc-grid-tile__title">Title</span>
-      </span>
-                            </li>
-                                <li class="mdc-grid-tile">
-                                    <div class="mdc-grid-tile__primary">
-                                        <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                                    </div>
-                                    <span class="mdc-grid-tile__secondary">
-        <span class="mdc-grid-tile__title">Title</span>
-      </span>
+                                <li class="mdc-list-item">
+                                    <img class="mdc-list-item__start-detail" src="http://wfarm4.dataknet.com/static/resources/icons/set117/a1610fef.png" width="56" height="56" alt="Brown Bear">
+                                    <span class="mdc-list-item__text">
+                                        核心价值观
+                                        <span class="mdc-list-item__secondary-text" >朗读社会主义核心价值观100次</span>
+                                    </span>
+
                                 </li>
-                                <li class="mdc-grid-tile">
-                                    <div class="mdc-grid-tile__primary">
-                                        <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                                    </div>
-                                    <span class="mdc-grid-tile__secondary">
-        <span class="mdc-grid-tile__title">Title</span>
-      </span>
+                                <li class="mdc-list-item">
+                                    <img class="mdc-list-item__start-detail" src="http://wfarm4.dataknet.com/static/resources/icons/set117/a1610fef.png" width="56" height="56" alt="Brown Bear">
+                                    <span class="mdc-list-item__text">
+                                        核心价值观
+                                        <span class="mdc-list-item__secondary-text" >朗读社会主义核心价值观100次</span>
+                                    </span>
+
                                 </li>
-                                <li class="mdc-grid-tile">
-                                    <div class="mdc-grid-tile__primary">
-                                        <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                                    </div>
-                                    <span class="mdc-grid-tile__secondary">
-        <span class="mdc-grid-tile__title">Title</span>
-      </span>
-                                </li>                                <li class="mdc-grid-tile">
-                                <div class="mdc-grid-tile__primary">
-                                    <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                                </div>
-                                <span class="mdc-grid-tile__secondary">
-        <span class="mdc-grid-tile__title">Title</span>
-      </span>
-                            </li>
-                                <li class="mdc-grid-tile">
-                                    <div class="mdc-grid-tile__primary">
-                                        <img class="mdc-grid-tile__primary-content" src="my-image.jpg" />
-                                    </div>
-                                    <span class="mdc-grid-tile__secondary">
-        <span class="mdc-grid-tile__title">Title</span>
-      </span>
+                                <li class="mdc-list-item">
+                                    <img class="mdc-list-item__start-detail" src="http://wfarm4.dataknet.com/static/resources/icons/set117/a1610fef.png" width="56" height="56" alt="Brown Bear">
+                                    <span class="mdc-list-item__text">
+                                        核心价值观
+                                        <span class="mdc-list-item__secondary-text" >朗读社会主义核心价值观100次</span>
+                                    </span>
+
+                                </li>
+                                <li class="mdc-list-item">
+                                    <img class="mdc-list-item__start-detail" src="http://wfarm4.dataknet.com/static/resources/icons/set117/a1610fef.png" width="56" height="56" alt="Brown Bear">
+                                    <span class="mdc-list-item__text">
+                                        核心价值观
+                                        <span class="mdc-list-item__secondary-text" >朗读社会主义核心价值观100次</span>
+                                    </span>
+
+                                </li>
+                                <li class="mdc-list-item">
+                                    <img class="mdc-list-item__start-detail" src="http://wfarm4.dataknet.com/static/resources/icons/set117/a1610fef.png" width="56" height="56" alt="Brown Bear">
+                                    <span class="mdc-list-item__text">
+                                        核心价值观
+                                        <span class="mdc-list-item__secondary-text" >朗读社会主义核心价值观100次</span>
+                                    </span>
+
+                                </li>
+                                <li class="mdc-list-item">
+                                    <img class="mdc-list-item__start-detail" src="http://wfarm4.dataknet.com/static/resources/icons/set117/a1610fef.png" width="56" height="56" alt="Brown Bear">
+                                    <span class="mdc-list-item__text">
+                                        核心价值观
+                                        <span class="mdc-list-item__secondary-text" >朗读社会主义核心价值观100次</span>
+                                    </span>
+
+                                </li>
+                                <li class="mdc-list-item">
+                                    <img class="mdc-list-item__start-detail" src="http://wfarm4.dataknet.com/static/resources/icons/set117/a1610fef.png" width="56" height="56" alt="Brown Bear">
+                                    <span class="mdc-list-item__text">
+                                        核心价值观
+                                        <span class="mdc-list-item__secondary-text" >朗读社会主义核心价值观100次</span>
+                                    </span>
+
                                 </li>
                             </ul>
                         </div>
+                        <!--<div class="panel left-panel" id="left-panel-2" role="tabpanel" aria-hidden="true">Item Two</div>-->
+                        <!--<div class="panel left-panel" id="left-panel-3" role="tabpanel" aria-hidden="true">Item Three</div>-->
                     </div>
-
-                    <!--<div  style="padding:20px;">-->
-                        <!--<p class="counter-subheading color-white">CPU比率</p>-->
-                        <!--<div class="mdc-slider mdc-slider&#45;&#45;discrete" tabindex="0" role="slider"-->
-                             <!--aria-valuemin="0" aria-valuemax="10" aria-valuenow="3"-->
-                             <!--aria-label="Select Value" style="width:150px;margin-top:-10px">-->
-                            <!--<div class="mdc-slider__track-container">-->
-                                <!--<div class="mdc-slider__track"></div>-->
-                            <!--</div>-->
-                            <!--<div class="mdc-slider__thumb-container">-->
-                                <!--<div class="mdc-slider__pin">-->
-                                    <!--<span class="mdc-slider__pin-value-marker"></span>-->
-                                <!--</div>-->
-                                <!--<svg class="mdc-slider__thumb" width="21" height="21">-->
-                                    <!--<circle cx="10.5" cy="10.5" r="7.875"></circle>-->
-                                <!--</svg>-->
-                                <!--<div class="mdc-slider__focus-ring"></div>-->
-                            <!--</div>-->
-                        <!--</div>-->
-                    <!--</div>-->
-
-
                 </div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 " style="padding:10px;">
-                    <div class="speedometer">
+<!--Center section-->
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-6 " >
+                    <div class="main-container">
+                        <div class="ui-container">
+
+                            <!-- CIRCLE -->
+                            <!--<svg class="ui-circle filter-glow-lg">-->
+                                <!--<circle class="circle-stroked radius-sm stroke-sm " />-->
+                                <!--<circle class="circle-stroked radius-md stroke-sm distance-1" />-->
+                                <!--<circle class="circle-stroked radius-lg stroke-sm" />-->
+                                <!--<circle class="circle-stroked radius-xl stroke-sm" />-->
+                            <!--</svg>-->
+
+                            <svg class="ui-circle animation-rotate duration-1s">
+                                <circle class="circle-stroked dash-sm radius-xxl stroke-sm" />
+                            </svg>
+
+                            <svg class="ui-circle animation-rotate  filter-glow-off">
+                                <circle class="circle-slice radius-xl stroke-xl "/>
+                            </svg>
+
+                        </div>
+                        <div class="speedometer">
                             <div class="inner-ring"></div>
                             <div class="outer-ring"><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span><span class="tick"></span>
                             </div>
@@ -207,11 +202,13 @@
                                 <p class="unit">/每秒</p>
                             </div>
                             <div class="progress"></div>
-                        <!--<button class="retry-button">Retry</button>-->
-                        <button class="mdc-button mdc-button--stroked big-round-corner-button secondary-stroked-button mdc-ripple retry-button">
-                            <i class="material-icons mdc-button__icon">pause</i>暂停
-                        </button>
+                            <!--<button class="retry-button">Retry</button>-->
+                            <button class="mdc-button mdc-button--stroked big-round-corner-button secondary-stroked-button mdc-ripple retry-button">
+                                <i class="material-icons mdc-button__icon">pause</i>暂停
+                            </button>
+                        </div>
                     </div>
+
                     <div>
                         <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-12">
                             <div class="mdc-layout-grid__inner" style="margin-bottom:5px;">
@@ -233,60 +230,59 @@
                         </div>
                     </div>
                 </div>
-                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 " style="position:relative">
-                    <nav id="dynamic-tab-bar" class="mdc-tab-bar mdc-tab-bar__ranking mdc-tab-bar--indicator-accent " role="tablist">
+<!--Right section-->
+                <div class="mdc-layout-grid__cell mdc-layout-grid__cell--span-3 ">
+                    <nav id="right-tab-bar" class="mdc-tab-bar mdc-tab-bar__ranking mdc-tab-bar--indicator-accent" role="tablist">
                         <a role="tab" aria-controls="panel-1"
-                           class="mdc-tab mdc-tab--active" href="#panel-1">输出排名</a>
+                           class="mdc-tab mdc-tab--active" href="#right-panel-1">输出排名</a>
                         <a role="tab" aria-controls="panel-2"
-                           class="mdc-tab" href="#panel-2">今日</a>
+                           class="mdc-tab" href="#right-panel-2">今日</a>
                         <a role="tab" aria-controls="panel-3"
-                           class="mdc-tab" href="#panel-3">本周</a>
+                           class="mdc-tab" href="#right-panel-3">本周</a>
                         <span class="mdc-tab-bar__indicator"></span>
                     </nav>
 
-                    <div class="panels">
-                        <div class="panel active" id="panel-1" role="tabpanel" aria-hidden="false">
-                            <ul class="mdc-list mdc-list--more-dense">
-                                <li class="mdc-list-item">Winterhood
+                    <div class="panels right-panels">
+                        <div class="panel right-panel active" id="right-panel-1" role="tabpanel" aria-hidden="false">
+                            <ul class="mdc-list mdc-list--more-dense" id="rankings">
+                                <li class="mdc-list-item mdc-list-item-curved">Winterhood
                                     <span class="mdc-list-item__end-detail">
                                         <i class="material-icons">stars_rate</i> 1321
                                     </span>
                                 </li>
-                                <li class="mdc-list-item">Beier Cai
+                                <li class="mdc-list-item mdc-list-item-curved">Beier Cai
                                     <span class="mdc-list-item__end-detail">
                                         <i class="material-icons">stars_rate</i> 865
                                     </span>
                                 </li>
-                                <li class="mdc-list-item">霖小贤
+                                <li class="mdc-list-item  mdc-list-item-curved">霖小贤
                                     <span class="mdc-list-item__end-detail">
                                         <i class="material-icons">stars_rate</i> 632
                                     </span>
                                 </li>
-                                <li class="mdc-list-item">Kevin Han</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
-                                <li class="mdc-list-item">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Kevin Han</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
+                                <li class="mdc-list-item  mdc-list-item-curved">Single-line item</li>
                             </ul>
                         </div>
-                        <div class="panel" id="panel-2" role="tabpanel" aria-hidden="true">Item Two</div>
-                        <div class="panel" id="panel-3" role="tabpanel" aria-hidden="true">Item Three</div>
+                        <div class="panel right-panel" id="right-panel-2" role="tabpanel" aria-hidden="true">Item Two</div>
+                        <div class="panel right-panel" id="right-panel-3" role="tabpanel" aria-hidden="true">Item Three</div>
                     </div>
-                    <div class="panels__bg_1"></div>
-                    <div class="panels__bg_2"></div>
                 </div>
             </div>
         </div>
@@ -297,7 +293,16 @@
 <script src='http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js'></script>
 <script src="speedometer.js"></script>
 <script src="bundle.js"></script>
+<!--<script src="jquery.tiltedpage-scroll.js"></script>-->
 <script>mdc.autoInit()</script>
-
+<script>
+    $("#rankings").tiltedpage_scroll({
+        sectionContainer: "> li",     // In case you don't want to use <section> tag, you can define your won CSS selector here
+//        angle: 50,                         // You can define the angle of the tilted section here. Change this to false if you want to disable the tilted effect. The default value is 50 degrees.
+//        opacity: true,                     // You can toggle the opacity effect with this option. The default value is true
+////        scale: true,                       // You can toggle the scaling effect here as well. The default value is true.
+        outAnimation: true                 // In case you do not want the out animation, you can toggle this to false. The defaul value is true.
+    });
+</script>
 </body>
 </html>
